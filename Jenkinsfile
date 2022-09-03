@@ -19,6 +19,11 @@ pipeline {
                 sh 'docker push rawluck/rds-status-site:latest'
             }
         }
+        stage('Push to K8s') {
+            steps {
+                sh 'kubectl apply -f /k8s/*'
+            }
+        }
     }
     post {
         always {
