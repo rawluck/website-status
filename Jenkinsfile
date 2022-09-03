@@ -21,7 +21,7 @@ pipeline {
         }
         stage('Push to K8s') {
             steps {
-                sh 'kubectl apply -f /k8s/* --kubeconfig ~/.kube/config'
+                sh 'kubectl apply -f ./k8s/* --kubeconfig ~/.kube/config'
             }
         }
     }
