@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: status-site-deployment
+  namespace: rds
+  labels:
+    app: status-site
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: status-site
+  template:
+    metadata:
+      labels:
+        app: status-site
+    spec:
+      containers:
+      - name: status-site-web
+        image: rawluck/rds-status-site
+        ports:
+        - containerPort: 3000
