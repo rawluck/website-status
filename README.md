@@ -18,5 +18,5 @@ Displays the tasks and assignments that are ongoing.
 # Website
 
 - Status: https://status.realdevsquad.com/
-- Homepage 2: https://www.realdevsquad.com/
+- Homepage : https://www.realdevsquad.com/
 
